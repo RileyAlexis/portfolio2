@@ -1,0 +1,76 @@
+:root {
+  --violetlight100: #8800c7;
+  --violetlight75: #9F32D2;
+  --violetlight50: #B766DD;
+  --violetlight25: #CF99E8;
+  --violetlight0: #E7CCF3;
+  --yellowlight100: #FFF52E;
+  --yellowlight75: #FFF757;
+  --yellowlight50: #FFF981;
+  --yellowlight25: #FFFBAB;
+  --yellowlight0: #FFFDD5;
+  --violetdark100: #8800c7;
+  --violetdark75: #9F32d2;
+  --violetdark50: #B766dd;
+  --violetdark25: #CF99E8;
+  --violetdark0: #E7CCF3;
+  --yellowdark100: #FFF52E;
+  --yellowdark75: #FFF757;
+  --yellowdark50: #FFF981;
+  --yellowdark25: #FFFBAB;
+  --yellowdark0: #FFFDD5;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.verticalBar {
+  flex: 1;
+  animation: fadeIn 3s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  50% {
+    opacity: 0.60;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: .3;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+
+  /* Styles for dark mode */
+  body {
+    background-color: black;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+
+  /* Styles for light mode */
+  body {
+    background-color: white;
+  }
+}
