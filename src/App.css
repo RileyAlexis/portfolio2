@@ -39,23 +39,41 @@ body {
 
 .verticalBar {
   flex: 1;
-  animation: fadeIn 3s ease forwards;
+  animation: fadeIn 2s linear forwards;
   opacity: 0;
+}
+
+.butterflyContainer {
+  flex: 1;
+  animation: fadeIn 3s linear forwards;
+  opacity: .50;
+  width: 70vw;
+  height: 70vh;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translate(0, 0) scale(1);
   }
 
   50% {
     opacity: 0.60;
-    transform: translateX(0);
+    transform: translate(calc(-25vw + 50px), calc(-25vh + 50px)) scale(0.75);
   }
 
-  to {
+  75% {
     opacity: .3;
+    transform: translate(calc(-50vw + 50px), calc(-50vh + 50px)) scale(0.5);
+  }
+
+  100% {
+    opacity: .3;
+    transform: translate(calc(-75vw + 50px), calc(-75vh + 50px)) scale(0.3);
   }
 }
 
