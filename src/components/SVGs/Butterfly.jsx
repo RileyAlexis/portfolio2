@@ -1,10 +1,5 @@
-import { useEffect } from "react";
-
 export const ButterflySVG = ({ color }) => {
 
-   useEffect(() => {
-      console.log(color);
-   })
    return (
       <svg height="59.358459mm" id="svg230" width="82.291367mm" version="1.1" viewBox="0 0 82.291367 59.358459" xmlns="http://www.w3.org/2000/svg">
          <defs id="defs227" />

@@ -6,8 +6,8 @@ import { LightColors, DarkColors } from './interfaces';
 
 //Components
 import { BoxDraw } from './components/BoxDraw/BoxDraw';
+import { ButterflyTitle } from './components/ButterflyTitle/ButterflyTitle';
 
-import { ButterflySVG } from './components/Butterfly';
 
 export const App: React.FC = () => {
 
@@ -56,12 +56,11 @@ export const App: React.FC = () => {
 
   return (
     <div className='container'>
-      <div className='butterflyContainer'>
-        <ButterflySVG color={'green'} />
+      <div className='titleBar'>
+        <ButterflyTitle color={colorScheme === 'light' ? lightBar.violetlight50 : darkBar.violetdark100}
+        />
       </div>
-      <div>
-        <BoxDraw />
-      </div>
+      <BoxDraw />
     </div>
   )
 }

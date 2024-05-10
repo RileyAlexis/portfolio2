@@ -1,0 +1,56 @@
+.butterflyContainer {
+    opacity: 0;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    animation: butterflyFadeIn 3s linear 0.5s 1 alternate forwards;
+    /* butterflyShrinkMove 2s linear 3.5s 1 alternate forwards; */
+}
+
+@keyframes butterflyFadeIn {
+    0% {
+        opacity: 0.2;
+    }
+
+    15% {
+        opacity: 0.6;
+    }
+
+    30% {
+        opacity: 0.8;
+    }
+
+    45% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 0.8;
+    }
+
+    75% {
+        opacity: 0.6;
+    }
+
+    90% {
+        opacity: 0.3;
+    }
+
+
+    100% {
+        opacity: 0.2;
+    }
+}
+
+@keyframes butterflyShrinkMove {
+    0% {
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+
+    100% {
+        transform: translate(-150%, -190%) scale(0.25);
+    }
+}

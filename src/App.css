@@ -24,6 +24,8 @@
 body {
   padding: 0;
   margin: 0;
+  width: 100vw;
+  height: 100vh;
 }
 
 #root {
@@ -34,6 +36,7 @@ body {
 .container {
   display: flex;
   height: 100vh;
+  width: 100vw;
   overflow: hidden;
 }
 
@@ -43,17 +46,17 @@ body {
   opacity: 0;
 }
 
-.butterflyContainer {
+/* .butterflyContainer {
   flex: 1;
   animation: fadeIn 3s linear forwards;
-  opacity: .50;
+  opacity: 0;
   width: 70vw;
   height: 70vh;
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-}
+} */
 
 @keyframes fadeIn {
   from {
@@ -61,19 +64,24 @@ body {
     transform: translate(0, 0) scale(1);
   }
 
-  50% {
+  25% {
     opacity: 0.60;
     transform: translate(calc(-25vw + 50px), calc(-25vh + 50px)) scale(0.75);
   }
 
-  75% {
-    opacity: .3;
+  50% {
+    opacity: .8;
     transform: translate(calc(-50vw + 50px), calc(-50vh + 50px)) scale(0.5);
   }
 
-  100% {
-    opacity: .3;
+  75% {
+    opacity: .8;
     transform: translate(calc(-75vw + 50px), calc(-75vh + 50px)) scale(0.3);
+  }
+
+  100% {
+    opacity: 0.3;
+    transform: translate(calc(-90vw + 50px), calc(-90vh + 50px)) scale(0.2);
   }
 }
 

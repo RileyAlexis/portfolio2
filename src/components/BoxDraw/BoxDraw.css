@@ -1,0 +1,30 @@
+.circleContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.circleBox {
+    padding: 8px;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 20%;
+    background-color: turquoise;
+    animation: bounce 0.7s ease 0s infinite alternate both;
+}
+
+@keyframes bounce {
+    from {
+        transform: translate(0%, -15%);
+        transform: scale(100%);
+        transform: rotate(0);
+    }
+
+    to {
+        transform: translate(0%, 15%);
+        transform: scale(75%);
+        transform: rotate(180deg);
+    }
+}
