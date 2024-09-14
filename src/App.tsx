@@ -10,8 +10,9 @@ import { ButterflyTitle } from './components/ButterflyTitle/ButterflyTitle';
 import { OpenHexagon } from './components/shapes/openHexagon/openHexagon';
 import { CircleAnim } from './components/shapes/CircleAnim';
 import { TitleBar } from './components/TitleBar/TitleBar';
+import { TabNavigation } from './components/TabNavigation';
 
-//Images
+//MUI
 
 export const App: React.FC = () => {
 
@@ -60,17 +61,21 @@ export const App: React.FC = () => {
 
   return (
     <div className='container'>
-      <div>
+      <div className='titleBar'>
         <TitleBar />
       </div>
+      <div className='tabNavigation'>
+        <TabNavigation />
+      </div>
+
+
 
       <div style={{
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        margin: 20
+        margin: 20,
       }}>
-
         {/* <BoxDraw /> */}
         {/* <OpenHexagon /> */}
         {/* <CircleAnim /> */}
