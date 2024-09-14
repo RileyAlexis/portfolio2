@@ -21,6 +21,7 @@
   --yellowdark0: #FFFDD5;
 }
 
+
 body {
   padding: 0;
   margin: 0;
@@ -37,7 +38,7 @@ body {
   display: flex;
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
+  margin: 10,
 }
 
 .verticalBar {

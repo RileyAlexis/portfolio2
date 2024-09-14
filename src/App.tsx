@@ -7,7 +7,11 @@ import { LightColors, DarkColors } from './interfaces';
 //Components
 import { BoxDraw } from './components/BoxDraw/BoxDraw';
 import { ButterflyTitle } from './components/ButterflyTitle/ButterflyTitle';
+import { OpenHexagon } from './components/shapes/openHexagon/openHexagon';
+import { CircleAnim } from './components/shapes/CircleAnim';
+import { TitleBar } from './components/TitleBar/TitleBar';
 
+//Images
 
 export const App: React.FC = () => {
 
@@ -56,11 +60,21 @@ export const App: React.FC = () => {
 
   return (
     <div className='container'>
-      <div className='titleBar'>
-        <ButterflyTitle color={colorScheme === 'light' ? lightBar.violetlight50 : darkBar.violetdark100}
-        />
+      <div>
+        <TitleBar />
       </div>
-      <BoxDraw />
+
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        margin: 20
+      }}>
+
+        {/* <BoxDraw /> */}
+        {/* <OpenHexagon /> */}
+        {/* <CircleAnim /> */}
+      </div>
     </div>
   )
 }

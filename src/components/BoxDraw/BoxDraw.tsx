@@ -19,7 +19,10 @@ export const BoxDraw: React.FC = () => {
         'darkred',
         'thistle',
         'violet',
-        'mediumorchid'
+        'mediumorchid',
+        'darkorchid',
+        'fuchsia',
+
     ];
 
     const divs = Array.from({ length: count }, (_, index) => (
@@ -31,8 +34,6 @@ export const BoxDraw: React.FC = () => {
                     animationDelay: `${index * 0.2}s`,
                     backgroundColor: colors[index],
                     animationDuration: `${durationIterator * 1.5}s`,
-
-
                 }}
             ></div>
         </div>

@@ -1,0 +1,63 @@
+/* Keyframes for rotating the arc */
+@keyframes rotateArc {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+/* HTML: <div class="arc"></div> */
+.arc {
+    --b: 15px;
+    /* the boder thickness */
+    --a: 310deg;
+    /* control the progression */
+
+    width: 200px;
+    aspect-ratio: 1;
+    padding: var(--b);
+    border-radius: 50%;
+    background: #c0d860;
+    --_g: /var(--b) var(--b) no-repeat radial-gradient(50% 50%, #000 97%, #0000);
+    mask: top var(--_g),
+        calc(50% + 50%*sin(var(--a))) calc(50% - 50%*cos(var(--a))) var(--_g),
+        linear-gradient(#0000 0 0) content-box intersect,
+        conic-gradient(#000 var(--a), #0000 0);
+}
+
+.arcAnimate {
+    animation: rotateArc;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.arcSmall {
+    position: absolute;
+    --b: 10px;
+    /* the boder thickness */
+    --a: 280deg;
+    /* control the progression */
+
+    width: 170px;
+    aspect-ratio: 1;
+    padding: var(--b);
+    border-radius: 50%;
+    background: #02BB36;
+    --_g: /var(--b) var(--b) no-repeat radial-gradient(50% 50%, #000 97%, #0000);
+    mask: top var(--_g),
+        calc(50% + 50%*sin(var(--a))) calc(50% - 50%*cos(var(--a))) var(--_g),
+        linear-gradient(#0000 0 0) content-box intersect,
+        conic-gradient(#000 var(--a), #0000 0);
+}
+
+.arcAnimateSmall {
+    animation: rotateArc;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
